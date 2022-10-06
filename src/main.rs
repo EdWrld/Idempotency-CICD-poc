@@ -22,7 +22,7 @@ mod tests {
     }
     #[test]
     fn test_hello_world_bad() {
-        // Should fail this is to test how the pipeline react.
+        // Should fail this is to test how the pipeline react
         assert_eq!(bad_hello_world(), "Hello, world!")
     }
 }
