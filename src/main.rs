@@ -1,5 +1,5 @@
 fn main() {
-    println!("{}",hello_world());
+    println!("{}", hello_world());
     println!("{}", bad_hello_world());
 }
 
@@ -8,7 +8,7 @@ fn hello_world() -> &'static str {
     return s;
 }
 
-fn bad_hello_world() -> &'static str{
+fn bad_hello_world() -> &'static str {
     let f = "Hello, fantasy";
     return f;
 }
