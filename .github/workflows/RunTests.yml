@@ -33,7 +33,7 @@ jobs:
       - name: Lint (rustfmt)
         uses: actions-rs/cargo@v1
         with:
-          command: xfmt
+          command: fmt
           args: --check
       - name: Install cargo readme
         uses: baptiste0928/cargo-install@v1
@@ -55,7 +55,7 @@ jobs:
       fail-fast: false
     steps:
       - uses: actions/checkout@v3
-      - uses: actions-res/toolchain@v1 # allows us to provide the components we want to use
+      - uses: actions-rs/toolchain@v1 # allows us to provide the components we want to use
       - run: rustup update ${{ matrix.toolchain }} && rustup default ${{ matrix.toolchain }}
       - name: Build
         run: cargo build --verbose
